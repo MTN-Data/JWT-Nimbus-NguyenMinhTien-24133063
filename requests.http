@@ -1,0 +1,26 @@
+### 1. Signup
+POST http://localhost:8005/auth/signup
+Content-Type: application/json
+
+{
+  "fullName": "Nguyen Minh Tien",
+  "email": "tien24133063@gmail.com",
+  "password": "123456"
+}
+
+### 2. Login
+POST http://localhost:8005/auth/login
+Content-Type: application/json
+
+{
+  "email": "tien24133063@gmail.com",
+  "password": "123456"
+}
+
+### 3. Current user - thay <TOKEN> bằng token nhận từ /auth/login
+GET http://localhost:8005/users/me
+Authorization: Bearer <TOKEN>
+
+### 4. All users
+GET http://localhost:8005/users
+Authorization: Bearer <TOKEN>
